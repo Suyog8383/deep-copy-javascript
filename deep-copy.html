@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  const profile = {
+    name: "suyog",
+    city: "pune",
+    details: {
+      pincode: 411043,
+      isActive: true,
+    },
+  };
+  const copyProfile = structuredClone(profile);
+  copyProfile.name = "rahul";
+  console.log("deep copy ", profile.name, copyProfile.name); //suyog rahul
+  copyProfile.city = "mumbai";
+  console.log("deep copy ", profile.city, copyProfile.city); // pune mumbai
+  profile.details.pincode = "NA";
+  console.log(
+    "deep copy ",
+    profile.details.pincode,
+    copyProfile.details.pincode
+  ); //NA 411043
+</script>
